@@ -1,6 +1,227 @@
 // data={name:["30号线","Line 30","30"],color:"#F67599",stations:{"a":{name:["龙泉驿火车站南","Longquanyi Railway Station South"],next:["b"],id:"01"},"b":{name:["玉虹路","Yuhong Road"],next:["c"],back:['a'],no_serve:true,id:"02"},"c":{name:["分水","Fenshui"],back:['b'],next:["d"],no_serve:true,id:"03"},"d":{name:["玉石","Yushi"],back:['c'],next:["e"],id:"04"},"e":{name:["惠王陵","Huiwangling"],back:['d'],next:["f"],interchange:[["2","#EB5A35"]],id:"04"},"f":{name:["航天立交","Hangtian Flyover"],back:['e'],next:["g"],id:"05"},"g":{name:["海桐街","Haitong Street"],back:['f'],next:["h"],id:"06"},"h":{name:["娇子立交","Jiaozi Flyover"],back:['g'],next:["i"],interchange:[["13","#C5A900"]],id:"07"},"i":{name:["多线换乘测试","The Interchange Test"],back:['h'],next:["x"],interchange:[["1","#222A8C"],["14","#6F263D"]],id:"08"},"x":{name:["双流机场2号航站楼东","Terminal 2 Shuangliu\nInternational Airport East"],interchange:[["19","#89ABE3"]],back:['i'],id:"09"},},start:"a",selected:"f",to_left:false,left_door:true,a_width:650,height:200,b_width:650,a_top:60,margin:50,new:true};
 var data;
 
+data={
+  name:["7号线","Line 7","7"],
+  color:"#00A6CC",
+  isLoop: true,
+  stations:{
+    "a":{
+      name:["火车北站","North Railway Station"],
+      next:["b"],
+      back:["ae"],
+      interchange:[["1","#0084D1"],["18","#00D1B2"]],
+      id:"01"
+    },
+    "b":{
+      name:["驷马桥","Simaqiao"],
+      next:["c"],
+      back:["a"],
+      interchange:[["3","#F25C05"]],
+      id:"02"
+    },
+    "c":{
+      name:["府青路","Fuqing Road"],
+      next:["d"],
+      back:["b"],
+      id:"03"
+    },
+    "d":{
+      name:["八里庄","Balizhuang"],
+      next:["e"],
+      back:["c"],
+      id:"04"
+    },
+    "e":{
+      name:["二仙桥","Erxianqiao"],
+      next:["f"],
+      back:["d"],
+      interchange:[["17","#00B5E9"]],
+      id:"05"
+    },
+    "f":{
+      name:["理工大学","University of Electronic Science and Technology of China"],
+      next:["g"],
+      back:["e"],
+      interchange:[["8","#009944"]],
+      id:"06"
+    },
+    "g":{
+      name:["崔家店","Cuijiadian"],
+      next:["h"],
+      back:["f"],
+      id:"07"
+    },
+    "h":{
+      name:["双店路","Shuangdian Road"],
+      next:["i"],
+      back:["g"],
+      id:"08"
+    },
+    "i":{
+      name:["槐树店","Huaishudian"],
+      next:["j"],
+      back:["h"],
+      interchange:[["4","#00A3E0"]],
+      id:"09"
+    },
+    "j":{
+      name:["迎晖路","Yinghui Road"],
+      next:["k"],
+      back:["i"],
+      id:"10"
+    },
+    "k":{
+      name:["成都东客站","Chengdu East Railway Station"],
+      next:["l"],
+      back:["j"],
+      interchange:[["2","#EB5A35"]],
+      id:"11"
+    },
+    "l":{
+      name:["大观","Daguan"],
+      next:["m"],
+      back:["k"],
+      id:"12"
+    },
+    "m":{
+      name:["狮子山","Shizishan"],
+      next:["n"],
+      back:["l"],
+      id:"13"
+    },
+    "n":{
+      name:["四川师大","Sichuan Normal University"],
+      next:["o"],
+      back:["m"],
+      interchange:[["13","#C5A900"]],
+      id:"14"
+    },
+    "o":{
+      name:["琉璃场","Liulichang"],
+      next:["p"],
+      back:["n"],
+      interchange:[["6","#9E259D"]],
+      id:"15"
+    },
+    "p":{
+      name:["三瓦窑","Sanwayao"],
+      next:["q"],
+      back:["o"],
+      id:"16"
+    },
+    "q":{
+      name:["火车南站","South Railway Station"],
+      next:["r"],
+      back:["p"],
+      interchange:[["1","#0084D1"],["18","#00D1B2"]],
+      id:"17"
+    },
+    "r":{
+      name:["神仙树","Shenxianshu"],
+      next:["s"],
+      back:["q"],
+      interchange:[["5","#94282E"]],
+      id:"18"
+    },
+    "s":{
+      name:["高朋大道","Gaopeng Avenue"],
+      next:["t"],
+      back:["r"],
+      interchange:[["8","#009944"]],
+      id:"19"
+    },
+    "t":{
+      name:["太平园","Tai Ping Yuan"],
+      next:["u"],
+      back:["s"],
+      interchange:[["3","#F25C05"],["10","#00A1E4"]],
+      id:"20"
+    },
+    "u":{
+      name:["武侯大道","Wuhou Avenue"],
+      next:["v"],
+      back:["t"],
+      id:"21"
+    },
+    "v":{
+      name:["龙爪堰","Longzhaoyan"],
+      next:["w"],
+      back:["u"],
+      interchange:[["17","#00B5E9"]],
+      id:"22"
+    },
+    "w":{
+      name:["东坡路","Dongpo Road"],
+      next:["x"],
+      back:["v"],
+      interchange:[["13","#C5A900"]],
+      id:"23"
+    },
+    "x":{
+      name:["文化宫","Culture Palace"],
+      next:["y"],
+      back:["w"],
+      interchange:[["4","#00A3E0"]],
+      id:"24"
+    },
+    "y":{
+      name:["金沙博物馆","Jinsha Site Museum"],
+      next:["z"],
+      back:["x"],
+      id:"25"
+    },
+    "z":{
+      name:["一品天下","Yipintianxia"],
+      next:["aa"],
+      back:["y"],
+      interchange:[["2","#EB5A35"]],
+      id:"26"
+    },
+    "aa":{
+      name:["茶店子","Chadianzi"],
+      next:["ab"],
+      back:["z"],
+      id:"27"
+    },
+    "ab":{
+      name:["花照壁","Huazhaobi"],
+      next:["ac"],
+      back:["aa"],
+      id:"28"
+    },
+    "ac":{
+      name:["西南交大","Southwest Jiaotong University"],
+      next:["ad"],
+      back:["ab"],
+      interchange:[["6","#9E259D"]],
+      id:"29"
+    },
+    "ad":{
+      name:["九里堤","Jiulidi"],
+      next:["ae"],
+      back:["ac"],
+      id:"30"
+    },
+    "ae":{
+      name:["北站西二路","North Station West 2nd Road"],
+      next:["a"],
+      back:["ad"],
+      interchange:[["5","#94282E"]],
+      id:"31"
+    }
+  },
+  start:"a",
+  selected:"k",
+  to_left:false,
+  left_door:true,
+  a_width:650,
+  height:200,
+  b_width:650,
+  a_top:60,
+  margin:50,
+  new:true
+};
 
 function textalign(text,x,y,way='left',ho="top"){return text.x(x-(way=="left"?0:text.bbox().width/(way=="center"?2:1))).y(y-(ho=="top"?0:text.bbox().height/(ho=="center"?2:1)));}
 function next_station(id,to_left){var xid=id;do{xid=data.stations[xid][to_left?'next':'back'][0];}while(data.stations[xid].no_serve&&data.stations[xid][to_left?'next':'back']);return xid;}
