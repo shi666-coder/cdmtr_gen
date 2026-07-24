@@ -154,6 +154,28 @@ function new_branch(){
     layer.alert("开发中，尽情期待！");
 }
 
+function new_loop(){
+    // 获取全部站点
+    const allStations = loads(data);
+    // 站点不足2个无法做成环线
+    if(allStations.length < 2){
+        layer.alert("至少需要2座车站才能设置环线！");
+        return;
+    }
+    // 取首站、末站key
+    const firstKey = allStations[0].key;
+    const lastKey = allStations[allStations.length - 1].key;
+    // 打上环线标记
+    data.isLoop = true;
+    // 首尾双向互指，闭环
+    data.stations[firstKey].back = [lastKey];
+    data.stations[lastKey].next = [firstKey];
+    // 刷新界面+重绘导视图
+    update();
+    layer.alert("已成功设置为环线！");
+}
+
+
 function load_branch(data,id){
     if(!data.branches){
         return;
